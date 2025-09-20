@@ -1,130 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entangled Gazes - SIGGRAPH Asia 2025</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        /* Custom styles for the page */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* A light gray background */
-        }
-        /* Style for the Vimeo embed container to maintain aspect ratio */
-        .vimeo-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-            border-radius: 0.5rem; /* Rounded corners */
-        }
-        .vimeo-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+      /* Custom styles for the page */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc; /* A light gray background */
+      }
+      /* Style for the Vimeo embed container to maintain aspect ratio */
+      .vimeo-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        max-width: 100%;
+        background: #000;
+        border-radius: 0.5rem; /* Rounded corners */
+      }
+      .vimeo-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     </style>
-</head>
-<body class="text-gray-800">
-
+  </head>
+  <body class="text-gray-800">
     <!-- Main container -->
     <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Header Section -->
+      <header class="text-center mb-10">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+          Entangled Gazes: Reconstituting the Stereoscopic Box Set with LLMs and
+          Virtual Reality
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">SIGGRAPH Asia 2025</p>
+      </header>
 
-        <!-- Header Section -->
-        <header class="text-center mb-10">
-            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-                Entangled Gazes: Reconstituting the Stereoscopic Box Set with LLMs and Virtual Reality
-            </h1>
-            <p class="mt-4 text-lg text-gray-600">SIGGRAPH Asia 2025</p>
-        </header>
+      <!-- Author List -->
+      <section id="authors" class="text-center mb-12">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900">Authors</h2>
+        <div
+          class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-gray-700"
+        >
+          <span class="font-semibold">Paul Heinrich Bethge</span>
+          <span class="font-semibold">Emmanuelle Denove</span>
+          <span class="font-semibold">Dhruva Gowda-Storz</span>
+          <span>Adriano Viegas Milani</span>
+          <span>Tai Leong Cheong</span>
+          <span>Paul Bourke</span>
+          <span>Sarah Kenderdine</span>
+          <span>Jeffrey Shaw</span>
+        </div>
+        <p class="mt-4 text-sm text-gray-500">
+          <a
+            href="https://www.epfl.ch/labs/emplus/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-600 hover:underline"
+            >Laboratory for Experimental Museology</a
+          >, EPFL and
+          <a
+            href="https://vrc.hkbu.edu.hk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-600 hover:underline"
+            >Visualization Research Centre (VRC)</a
+          >, HKBU.
+        </p>
+      </section>
 
-        <!-- Author List -->
-        <section id="authors" class="text-center mb-12">
-            <h2 class="text-2xl font-semibold mb-4 text-gray-900">Authors</h2>
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-gray-700">
-                <span class="font-semibold">Paul Heinrich Bethge</span>
-                <span class="font-semibold">Emmanuelle Denove</span>
-                <span class="font-semibold">Dhruva Gowda-Storz</span>
-                <span>Adriano Viegas Milani</span>
-                <span>Tai Leong Cheong</span>
-                <span>Paul Bourke</span>
-                <span>Sarah Kenderdine</span>
-                <span>Jeffrey Shaw</span>
-            </div>
-             <p class="mt-4 text-sm text-gray-500"><a href="https://www.epfl.ch/labs/emplus/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Laboratory for Experimental Museology</a>, EPFL and <a href="https://vrc.hkbu.edu.hk/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Visualization Research Centre (VRC)</a>, HKBU.</p>
-        </section>
+      <!-- Abstract Section -->
+      <section id="abstract" class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b pb-2">
+          Abstract
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+          This paper presents a computational framework for critically
+          reinterpreting colonial-era stereoscopic box sets. Using James
+          Ricalton's China through the Stereoscope (1901) as a case study, we
+          deconstruct its linear narrative using NLP methods for thematic
+          modeling, semantic mapping, and colonial language identification. This
+          analysis informs two complementary artworks in a large-scale 360° VR
+          environment. Cross Eyed offers a guided experience, using the thematic
+          models as lenses for inquiry and visually distinguishing identified
+          rhetoric. Latent Cartographies, in contrast, empowers users to freely
+          navigate the archive’s raw semantic space, fostering diverse modes of
+          experiential engagement with contested heritage.
+        </p>
+      </section>
 
-        <!-- Abstract Section -->
-        <section id="abstract" class="mb-12">
-            <h2 class="text-2xl font-semibold mb-4 text-gray-900 border-b pb-2">Abstract</h2>
-            <p class="text-gray-700 leading-relaxed">
-                This paper presents a computational framework for critically reinterpreting colonial-era stereoscopic box sets. Using James Ricalton's China through the Stereoscope (1901) as a case study, we deconstruct its linear narrative using NLP methods for thematic modeling, semantic mapping, and colonial language identification. This analysis informs two complementary artworks in a large-scale 360° VR environment. Cross Eyed offers a guided experience, using the thematic models as lenses for inquiry and visually distinguishing identified rhetoric. Latent Cartographies, in contrast, empowers users to freely navigate the archive’s raw semantic space, fostering diverse modes of experiential engagement with contested heritage.
-            </p>
-        </section>
+      <!-- Videos Section -->
+      <section id="videos">
+        <h2 class="text-2xl font-semibold mb-6 text-gray-900 border-b pb-2">
+          Supporting Material
+        </h2>
 
-        <!-- Videos Section -->
-        <section id="videos">
-            <h2 class="text-2xl font-semibold mb-6 text-gray-900 border-b pb-2">Supporting Material</h2>
+        <!-- Grid for the two videos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- Grid for the two videos -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <!-- Video 1 Placeholder -->
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Cross Eyed: Decolonizing the Gaze of 19th Century Stereophotography</h3>
-                    <div class="vimeo-container">
-                        <iframe src="https://player.vimeo.com/video/1118049165?badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Cross Eyed: Decolonizing the Gaze of 19th Century Stereophotography"></iframe>
-                    </div>
-                    <p class="mt-3 text-sm text-gray-600">
-                        A guided experience using thematic lenses to deconstruct the archive, making the material more accessible while highlighting colonial rhetoric.
-                    </p>
-                </div>
-
-                <!-- Video 2 Placeholder -->
-                <div class="bg-white p-4 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Latent Cartographies</h3>
-                    <div class="vimeo-container">
-                        <!-- 
-                            VIMEO EMBED LINK 2: 
-                            Replace the placeholder below with your Vimeo iframe embed code.
-                        -->
-                        <div class="w-full h-full bg-gray-200 flex items-center justify-center rounded-md">
-                            <span class="text-gray-500">Vimeo Embed 2</span>
-                        </div>
-                    </div>
-                    <p class="mt-3 text-sm text-gray-600">
-                        An exploratory experience allowing users to freely navigate the archive's semantic space and discover latent connections within the text and images.
-                    </p>
-                </div>
+          <!-- Video 1 Placeholder -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Cross Eyed: Decolonizing the Gaze of 19th Century
+              Stereophotography
+            </h3>
+            <div class="vimeo-container">
+              <iframe
+                src="https://player.vimeo.com/video/1118049165?badge=0&autopause=0&player_id=0&app_id=58479"
+                frameborder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Cross Eyed: Decolonizing the Gaze of 19th Century Stereophotography"
+              ></iframe>
             </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="text-center mt-16 border-t pt-8">
-            <h2 class="text-2xl font-semibold mb-4 text-gray-900">Contact</h2>
-            <p class="text-gray-700 leading-relaxed">
-                For questions regarding the artworks, please reach out to:
-                <br>
-                <b>Cross Eyed:</b> Dhruva Gowda-Storz (<a href="mailto:dhruva.gowdastorz@epfl.ch" class="text-blue-600 hover:underline">dhruva.gowdastorz@epfl.ch</a>)
-                <br>
-                <b>Latent Cartographies:</b> Paul Heinrich Bethge (<a href="mailto:bethge@hkbu.edu.hk" class="text-blue-600 hover:underline">bethge@hkbu.edu.hk</a>)
+            <p class="mt-3 text-sm text-gray-600">
+              A guided experience using thematic lenses to deconstruct the
+              archive, making the material more accessible while highlighting
+              colonial rhetoric.
             </p>
-        </section>
+          </div>
 
+          <!-- Video 2 Placeholder -->
+          <div class="bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Latent Cartographies
+            </h3>
+            <div class="vimeo-container">
+                <iframe
+                  src="https://player.vimeo.com/video/1120431817?badge=0&autopause=0&player_id=0&app_id=58479"
+                  frameborder="0"
+                  allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  title="Latent Cartographies"
+                ></iframe>
+              </div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+            <p class="mt-3 text-sm text-gray-600">
+              An exploratory experience allowing users to freely navigate the
+              archive's semantic space and discover latent connections within
+              the text and images.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="text-center mt-16 border-t pt-8">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-900">Contact</h2>
+        <p class="text-gray-700 leading-relaxed">
+          For questions regarding the artworks, please reach out to:
+          <br />
+          <b>Cross Eyed:</b> Dhruva Gowda-Storz (<a
+            href="mailto:dhruva.gowdastorz@epfl.ch"
+            class="text-blue-600 hover:underline"
+            >dhruva.gowdastorz@epfl.ch</a
+          >)
+          <br />
+          <b>Latent Cartographies:</b> Paul Heinrich Bethge (<a
+            href="mailto:bethge@hkbu.edu.hk"
+            class="text-blue-600 hover:underline"
+            >bethge@hkbu.edu.hk</a
+          >)
+        </p>
+      </section>
     </div>
 
     <script src="https://player.vimeo.com/api/player.js"></script>
-</body>
+  </body>
 </html>
-
-
